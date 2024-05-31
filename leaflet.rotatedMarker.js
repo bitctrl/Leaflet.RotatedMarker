@@ -9,7 +9,8 @@
         var iconOptions = this.options.icon && this.options.icon.options;
         var iconAnchor = iconOptions && this.options.icon.options.iconAnchor;
         if (iconAnchor) {
-            iconAnchor = (iconAnchor[0] + 'px ' + iconAnchor[1] + 'px');
+            iconAnchor = L.point(iconAnchor);
+            iconAnchor = (iconAnchor.x + 'px ' + iconAnchor.y + 'px');
         }
         this.options.rotationOrigin = this.options.rotationOrigin || iconAnchor || 'center bottom' ;
         this.options.rotationAngle = this.options.rotationAngle || 0;
